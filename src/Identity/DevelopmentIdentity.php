@@ -6,7 +6,7 @@ class DevelopmentIdentity implements IdentityInterface
 {
 	public function getName()
 	{
-		return 'Graeme Tait';
+		return 'Local Developer';
 	}
 
 	public function getUsername()
