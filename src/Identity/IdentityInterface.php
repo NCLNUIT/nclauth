@@ -10,6 +10,8 @@ interface IdentityInterface
 
 	public function getEmail();
 
+	public function getStudentNumber();
+
 	public function isStaff();
 
 	public function isStudent();

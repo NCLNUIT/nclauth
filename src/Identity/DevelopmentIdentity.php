@@ -19,6 +19,11 @@ class DevelopmentIdentity implements IdentityInterface
 		return 'graeme.tait@ncl.ac.uk';
 	}
 
+	public function getStudentNumber()
+	{
+		return false;
+	}
+
 	public function isStaff()
 	{
 		return true;

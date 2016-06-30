@@ -23,6 +23,11 @@ class ShibbolethIdentity implements IdentityInterface
 		return $this->getShibAttribute('HTTP_SHIB_EP_EMAILADDRESS');
 	}
 
+	public function getStudentNumber()
+	{
+		return $this->getShibAttribute('HTTP_SHIB_STUDENT_NUMBER');
+	}
+
 	public function isStaff()
 	{
 		return $this->getShibAttribute('HTTP_SHIB_EP_STAFFORSTUDENT') == 'staff';

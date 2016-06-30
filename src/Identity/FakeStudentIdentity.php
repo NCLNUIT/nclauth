@@ -19,6 +19,11 @@ class FakeStudentIdentity implements IdentityInterface
 		return 'graeme.tait@ncl.ac.uk';
 	}
 
+	public function getStudentNumber()
+	{
+		return 912345678;
+	}
+
 	public function isStaff()
 	{
 		return false;
