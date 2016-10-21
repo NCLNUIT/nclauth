@@ -50,7 +50,12 @@ class ShibbolethIdentity implements IdentityInterface
 
 	public function isMemberOfCareersService()
 	{
-		return (strpos($this->getShibAttribute('grouper_groups'), 'Careers_Service') !== false);
+		return $this->isMemberOf('Careers_Service');
+	}
+
+	public function isMemberOf($group)
+	{
+		return (strpos($this->getShibAttribute('grouper_groups'), $group) !== false);
 	}
 
 	private function getShibAttribute($key)

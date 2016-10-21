@@ -43,4 +43,9 @@ class FakeStudentIdentity implements IdentityInterface
 	{
 		return false;
 	}
+
+	public function isMemberOf($group)
+	{
+		return false;
+	}
 }

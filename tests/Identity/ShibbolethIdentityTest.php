@@ -80,4 +80,15 @@ class ShibbolethIdentityTest extends PHPUnit_Framework_TestCase
 
 		$this->assertTrue($this->identity->isCareersServiceStaff());
 	}
+
+	public function testGroupMembership()
+	{
+		$this->setShibbolethData('grouper_groups', '');
+
+		$this->assertFalse($this->identity->isMemberOf('Test_Group'));
+
+		$this->setShibbolethData('grouper_groups', 'Test_Group');
+
+		$this->assertTrue($this->identity->isMemberOf('Test_Group'));
+	}
 }

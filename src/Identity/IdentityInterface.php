@@ -19,4 +19,6 @@ interface IdentityInterface
 	public function isGraduate();
 
 	public function isCareersServiceStaff();
+
+	public function isMemberOf($group);
 }

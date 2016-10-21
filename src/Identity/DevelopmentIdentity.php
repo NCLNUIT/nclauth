@@ -43,4 +43,9 @@ class DevelopmentIdentity implements IdentityInterface
 	{
 		return true;
 	}
+
+	public function isMemberOf($group)
+	{
+		return true;
+	}
 }
